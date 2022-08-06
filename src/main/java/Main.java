@@ -1,4 +1,4 @@
-import delta.Window;
+import delta.src.Window;
 
 /**
  * @version 1.0

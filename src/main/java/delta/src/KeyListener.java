@@ -1,4 +1,4 @@
-package delta;
+package delta.src;
 
 import static org.lwjgl.glfw.GLFW.GLFW_PRESS;
 import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;

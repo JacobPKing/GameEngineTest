@@ -1,4 +1,4 @@
-package util;
+package delta.util;
 
 public class Time {
     public static float timeStarted = System.nanoTime();

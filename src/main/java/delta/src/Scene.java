@@ -1,8 +1,14 @@
-package delta;
+package delta.src;
 
 public abstract class Scene {
 
+    protected Camera camera;
+
     public Scene() {
+
+    }
+
+    public void init() {
 
     }
 
