@@ -3,6 +3,7 @@ package delta;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
+import util.Time;
 
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
@@ -16,6 +17,7 @@ public class Window {
     private int width, height;
     private String title;
     private long glfwWindow;
+    private static Scene currentScene;
 
     private static Window window = null;
 
@@ -30,6 +32,22 @@ public class Window {
             Window.window = new Window();
         }
         return Window.window;
+    }
+
+    public static void changeScene(int newScene) {
+        switch (newScene) {
+            case 0:
+                currentScene = new LevelEditorScene();
+                //currentScene.init()
+                break;
+            case 1:
+                currentScene = new LevelScene();
+                break;
+            default:
+                assert false: "Unknown scene";
+                break;
+
+        }
     }
 
     public void run() {
@@ -88,9 +106,15 @@ public class Window {
 
         //Context
         GL.createCapabilities();
+
+        Window.changeScene(0);
     }
 
     public void loop() {
+        float beginTime = Time.getTime();
+        float endTime;
+        float dt = -1.0f;
+
         while (!glfwWindowShouldClose(glfwWindow)) {
             //Poll events
             glfwPollEvents();
@@ -98,7 +122,15 @@ public class Window {
             glClearColor(1.0f, 1.0f, 0.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
+            if( dt >= 0) {
+                currentScene.update(dt);
+            }
+
             glfwSwapBuffers(glfwWindow);
+
+            endTime = Time.getTime();
+            dt = endTime - beginTime;
+            beginTime = endTime;
         }
     }
 }
