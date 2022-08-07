@@ -123,4 +123,10 @@ public class Shader {
         mat4.get(matBuffer);
         glUniformMatrix4fv(varLocation, false, matBuffer);
     }
+
+    public void uploadTexture(String varname, int slot) {
+        int varlocation = glGetUniformLocation(shaderProgramID, varname);
+        use();
+        glUniform1i(varlocation, slot);
+    }
 }
