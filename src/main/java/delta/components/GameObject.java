@@ -8,8 +8,8 @@ import java.util.List;
 public class GameObject {
 
     private String name;
-    private List<Component> components;
-    public Transform transform;
+    protected List<Component> components;
+    protected Transform transform;
 
     public GameObject(String name) {
         this(name, new Transform());
@@ -62,5 +62,13 @@ public class GameObject {
         for (int i = 0; i < components.size(); i++) {
             components.get(i).start();
         }
+    }
+
+    public Transform getTransform() {
+        return this.transform;
+    }
+
+    public void setTransform(Transform transform) {
+        this.transform = transform;
     }
 }

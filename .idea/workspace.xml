@@ -7,8 +7,11 @@
     <list default="true" id="bee0def5-c3bd-4481-980a-23b31f18fc7f" name="Changes" comment="Added batch rendering / game objects">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delta/components/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/delta/components/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/delta/renderer/RenderBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/delta/renderer/RenderBatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/delta/src/LevelEditorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/delta/src/LevelEditorScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/delta/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/delta/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,15 +51,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jacob/IdeaProjects/Mario/assets/shaders&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/jacob/IdeaProjects/Mario/assets/shaders",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jacob\IdeaProjects\Mario\assets\shaders" />
@@ -67,11 +73,11 @@
   </component>
   <component name="RunManager">
     <configuration name="Run" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="jbr-11" />
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Mario.main" />
-      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="VM_PARAMETERS" value="-ea -XstartOnFirstThread" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
