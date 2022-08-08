@@ -71,7 +71,7 @@ public class RenderBatch {
         int eboID = glGenBuffers();
         int[] indices = generateIndices();
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, eboID);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices, GL_STATIC_DRAW);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices, GL_DYNAMIC_DRAW);
 
         // Enable buffer attribute pointers
         glVertexAttribPointer(0, POS_SIZE, GL_FLOAT, false, VERTEX_SIZE_BYTES, POS_OFFSET);
@@ -108,6 +108,11 @@ public class RenderBatch {
     }
 
     public void render() {
+        //Redo all sprites?
+        for (int i = 0; i < numSprites; i++) {
+            loadVertexProperties(i);
+        }
+
         //For now, rebuffer all data every frame
         glBindBuffer(GL_ARRAY_BUFFER, vboID);
         glBufferSubData(GL_ARRAY_BUFFER, 0, vertices);
