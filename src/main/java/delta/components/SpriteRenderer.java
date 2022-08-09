@@ -7,7 +7,12 @@ import org.joml.Vector4f;
 public class SpriteRenderer extends Component {
 
     private Vector4f color;
-    private Vector2f[] texCoords;
+    private Vector2f[] texCoords = {
+            new Vector2f(1,1),
+            new Vector2f(1,0),
+            new Vector2f(0,0),
+            new Vector2f(0,1)
+    };
     private Texture texture;
 
     public SpriteRenderer(Vector4f color) {
@@ -38,12 +43,10 @@ public class SpriteRenderer extends Component {
     }
 
     public Vector2f[] getTexCoords() {
-        Vector2f[] texCoords = {
-                new Vector2f(1,1),
-                new Vector2f(1,0),
-                new Vector2f(0,0),
-                new Vector2f(0,1)
-        };
         return texCoords;
+    }
+
+    public void setTexCoords(Vector2f[] texCoords) {
+        this.texCoords = texCoords;
     }
 }
